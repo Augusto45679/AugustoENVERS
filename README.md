@@ -1,6 +1,6 @@
 **1. Instrucciones para el proyecto y notas sobre el funcionamiento**
 -----------------------------------------------------------------------------
-**2. Para utilizar este proyecto clonar el URL: https://github.com/Augusto45679/AugustoENVERS.git **
+**2. Para utilizar este proyecto clonar el URL: "https://github.com/Augusto45679/AugustoENVERS.git"**
 --------
 **class: "Revision"**
 
