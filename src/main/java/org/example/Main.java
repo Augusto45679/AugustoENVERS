@@ -18,7 +18,7 @@ public class Main {
             // Persistir
             em.getTransaction().begin();
 
-    /*
+
              Categoria categoria1 = Categoria.builder()
                     .denominacion("Gondola Dulce")
                     .build();
@@ -77,14 +77,14 @@ public class Main {
             factura1.getDetalleFactura().add(detalle1);
             factura2.getDetalleFactura().add(detalle2);
 
-
+            em.persist(cliente1);
             em.persist(factura1);
             em.persist(factura2);
          em.getTransaction().commit();
-    */
+
             //------------------------------------------------
             // Actualizar facturas
-            em.getTransaction().begin();
+           /* em.getTransaction().begin();
 
             Factura factura1 = em.find(Factura.class,1L);
             factura1.setNumero(23); // LE CAMBIAMOS EL NUMERO A 23
@@ -97,9 +97,11 @@ public class Main {
             em.merge(factura2);
 
             em.flush();
-            em.getTransaction().commit();
+           em.getTransaction().commit(); */
             //------------------------------------------------
-
+            em.find(Cliente.class,1L);
+            cliente1.setDni(2222222);
+            em.merge(cliente1);
             //Eliminar
 
 
