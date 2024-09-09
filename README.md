@@ -1,9 +1,9 @@
 **1. Instrucciones para el proyecto y notas sobre el funcionamiento**
 -----------------------------------------------------------------------------
-**2. Para utilizar este proyecto clonar el URL: https://github.com/Augusto45679/AugustoENVERS.git**
+**2. Para utilizar este proyecto clonar el URL:**
 --------
 **class: "Revision"**
-AAAAA
+
 @GeneratedValue: Esta anotación se utiliza para especificar cómo se generarán los valores de la clave primaria. Hay varias estrategias disponibles, pero en este caso, se utiliza la estrategia GenerationType.SEQUENCE.
 
 strategy = GenerationType.SEQUENCE: Indica que los valores de la clave primaria se generarán utilizando una secuencia de base de datos. Una secuencia es un objeto de base de datos que genera valores numéricos secuenciales.
