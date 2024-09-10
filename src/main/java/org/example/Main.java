@@ -99,14 +99,17 @@ public class Main {
             em.flush();
            em.getTransaction().commit(); */
             //------------------------------------------------
-            em.find(Cliente.class,1L);
-            cliente1.setDni(2222222);
-            em.merge(cliente1);
+
             //Eliminar
+           /*
+            em.getTransaction().begin();
 
+            Factura factura1 = em.find(Factura.class,1L);
+            em.remove(factura1);
 
-
-            //Consulta + mostrar datos
+            em.flush();
+            em.getTransaction().commit();
+            */
 
         } catch (Exception e) {
             em.getTransaction().rollback();
