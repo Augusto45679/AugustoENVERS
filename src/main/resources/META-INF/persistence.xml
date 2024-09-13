@@ -10,6 +10,7 @@
         <class>org.example.Entidades.Cliente</class>
         <class>org.example.Entidades.Articulo</class>
         <class>org.example.Entidades.Domicilio</class>
+        <class>org.example.audit.Revision</class>
 
         <properties>
             <property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>

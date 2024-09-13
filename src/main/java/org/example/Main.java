@@ -2,6 +2,7 @@ package org.example;
 
 
 import org.example.Entidades.*;
+import org.example.audit.Revision;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -77,35 +78,32 @@ public class Main {
             factura1.getDetalleFactura().add(detalle1);
             factura2.getDetalleFactura().add(detalle2);
 
-            em.persist(cliente1);
             em.persist(factura1);
-            em.persist(factura2);
-         em.getTransaction().commit();
+             em.getTransaction().commit();
 
             //------------------------------------------------
-            // Actualizar facturas
-           /* em.getTransaction().begin();
+            // Actualizar domicilio al cliente
+            em.getTransaction().begin();
 
-            Factura factura1 = em.find(Factura.class,1L);
-            factura1.setNumero(23); // LE CAMBIAMOS EL NUMERO A 23
+            Domicilio domi2 = Domicilio.builder()
+                    .nombreCalle("Juab B bustos")
+                    .numero(233)
+                    .build();
+            cliente1.setDomicilio(domi2);
+            em.merge(cliente1);
 
-            em.merge(factura1);
-
-            Factura factura2 = em.find(Factura.class,2L);
-            factura2.setNumero(88);
-            factura2.setNumero(120000);
-            em.merge(factura2);
-
+            Revision revision = new Revision();
+            em.persist(revision);
             em.flush();
-           em.getTransaction().commit(); */
+           em.getTransaction().commit();
             //------------------------------------------------
 
             //Eliminar
            /*
             em.getTransaction().begin();
 
-            Factura factura1 = em.find(Factura.class,1L);
-            em.remove(factura1);
+            Factura factura3 = em.find(Factura.class,3L);
+            em.remove(factura3);
 
             em.flush();
             em.getTransaction().commit();
